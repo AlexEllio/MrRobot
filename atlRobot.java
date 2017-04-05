@@ -45,7 +45,7 @@ public class atlRobot extends Robot {
 		 boolean [][] MyMatrix = new boolean [10][10] ;
 		 int numTanks = 0;
 		 
-		 //Creamos matriz con posición de tanques
+		 //Creamos matriz con posiciÃ³n de tanques
 		 while (numTanks < 30){
 				int numRandR = rnd.nextInt(10);
 				int numRandC = rnd.nextInt(10);
@@ -56,14 +56,14 @@ public class atlRobot extends Robot {
 			}
 		return MyMatrix;
 	}
-	//posicion de inicio del tanque y posicion final a la que queremos llegar con él.
+	//posicion de inicio del tanque y posicion final a la que queremos llegar con Ã©l.
 	public void stablishPositions(){
 		Random rnd = new Random();
 		 rnd.setSeed(29);
 		 boolean [][] MyMatrix = new boolean [10][10] ;
 		 int tanqueX = 0;
 		 int tanqueY = 0;
-		 //Obtenemos posición inicial del tanque atl
+		 //Obtenemos posiciÃ³n inicial del tanque atl
 		 boolean ok=true;
 			while(ok){
 				tanqueX=rnd.nextInt(10);
@@ -89,25 +89,25 @@ public class atlRobot extends Robot {
 		celda res[]=new celda[4];
 		int num=0;
 		
-		if(i!=0){
+		if(i!=0){ //Left
 			if(!Matrix[i-1][j]){
 				res[num]=MatrixCeldas[i-1][j];
 				num++;
 			}
 		}
-		if(i!=9){
+		if(i!=9){ //Right
 			if(!Matrix[i+1][j]){
 				res[num]=MatrixCeldas[i+1][j];
 				num++;
 			}
 		}
-		if(j!=0){
+		if(j!=0){ //Top
 			if(!Matrix[i][j-1]){
 				res[num]=MatrixCeldas[i][j-1];
 				num++;
 			}		
 		}
-		if(j!=9){
+		if(j!=9){ //Bottom
 			if(!Matrix[i][j+1]){
 				res[num]=MatrixCeldas[i][j+1];
 				num++;
